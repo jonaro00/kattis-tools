@@ -39,9 +39,9 @@ for test in $(find "$target" -name '*.in' | sort); do
     ans=$(cat "$(echo $test | cut -d'.' -f1).ans")
     out=$(timeout 5 cargo run -q --bin "$code" < $test)
     if [ "$out" = "$ans" ]; then
-        echo "✅"
+        echo "✅👺👍"
     else
-        echo "❌"
+        echo "❌👺👎"
         echo "---- Input:     ----"
         cat "$test"
         echo "---- Expected:  ----"
