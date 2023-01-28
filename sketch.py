@@ -155,6 +155,11 @@ def printe(*args, **kwargs):
     # Print to stderr (ignored by Kattis)
     print(*args, **kwargs, file=stderr)
 
+def dbg(*args, **kwargs):
+    # debug print and return the last value (for inlining)
+    printe(*args, **kwargs)
+    return args[-1]
+
 def ii():
     return int(input())
 
